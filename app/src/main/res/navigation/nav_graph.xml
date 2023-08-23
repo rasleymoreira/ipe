@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listMovieFragment">
+
+    <fragment
+        android:id="@+id/detailsMovieFragment"
+        android:name="com.example.institutodepesquisaseldorado.ui.movie.details.DetailsMovieFragment"
+        android:label="DetailsMovieFragment"
+        tools:layout="@layout/fragment_details_movie">
+        <argument
+            android:name="movie"
+            app:argType="com.example.institutodepesquisaseldorado.data.model.movie.MovieModelData" />
+    </fragment>
+    <fragment
+        android:id="@+id/listMovieFragment"
+        android:name="com.example.institutodepesquisaseldorado.ui.movie.list.ListMovieFragment"
+        android:label="ListMovieFragment"
+        tools:layout="@layout/fragment_list_movie">
+        <action
+            android:id="@+id/action_listMovieFragment_to_detailsMovieFragment"
+            app:destination="@id/detailsMovieFragment" />
+
+        <argument
+            android:name="listMovieType"
+            app:argType="com.example.institutodepesquisaseldorado.data.model.movie.ListMovieType"
+            android:defaultValue="NOW_PLAYING" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.example.institutodepesquisaseldorado.ui.movie.list.ListMovieFragment"
+        android:label="ListMovieFragment"
+        tools:layout="@layout/fragment_list_movie">
+        <action
+            android:id="@+id/action_listMovieFragment_to_detailsMovieFragment"
+            app:destination="@id/detailsMovieFragment" />
+
+        <argument
+            android:name="listMovieType"
+            app:argType="com.example.institutodepesquisaseldorado.data.model.movie.ListMovieType"
+            android:defaultValue="POPULAR" />
+    </fragment>
+    <fragment
+        android:id="@+id/topRatedFragment"
+        android:name="com.example.institutodepesquisaseldorado.ui.movie.list.ListMovieFragment"
+        android:label="ListMovieFragment"
+        tools:layout="@layout/fragment_list_movie">
+        <action
+            android:id="@+id/action_listMovieFragment_to_detailsMovieFragment"
+            app:destination="@id/detailsMovieFragment" />
+
+        <argument
+            android:name="listMovieType"
+            app:argType="com.example.institutodepesquisaseldorado.data.model.movie.ListMovieType"
+            android:defaultValue="TOP_RATED" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="com.example.institutodepesquisaseldorado.ui.movie.list.ListMovieFragment"
+        android:label="ListMovieFragment"
+        tools:layout="@layout/fragment_list_movie">
+        <action
+            android:id="@+id/action_listMovieFragment_to_detailsMovieFragment"
+            app:destination="@id/detailsMovieFragment" />
+
+        <argument
+            android:name="listMovieType"
+            app:argType="com.example.institutodepesquisaseldorado.data.model.movie.ListMovieType"
+            android:defaultValue="UPCOMING" />
+    </fragment>
+</navigation>

@@ -1,0 +1,20 @@
+<resources>
+    <!-- Generals  -->
+    <string name="app_name">Instituto De Pesquisas Eldorado</string>
+    <string name="close_dialog">close</string>
+    <string name="an_error_occurred">error</string>
+
+    <!--  Splash Screen  -->
+    <string name="splash_screen_title">Instituto De Pesquisas Eldorado</string>
+
+    <!--    Item Movie -->
+    <string name="tx_item_name">Nome</string>
+    <string name="text_description_empty">Esse filme não possui descrição.</string>
+
+    <!--  Menu Labels  -->
+    <string name="menu_label_home">Assistir agora</string>
+    <string name="menu_label_search">Pesquisar</string>
+    <string name="menu_label_popular">Populares</string>
+    <string name="menu_label_top_rated">Melhores avaliados</string>
+    <string name="menu_label_upcoming">Em breve</string>
+</resources>
